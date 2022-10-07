@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import Counter from './counter/Counter.jsx';
 import Form from './form/Form.jsx';
 import Test from './Test.jsx';
 
 class App extends Component {
+
+    componentDidMount(){
+        console.log('Estoy iniciando');
+    }
 
     render(){
         return (
@@ -13,6 +18,7 @@ class App extends Component {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolorum inventore cum a voluptate. Dolorem tenetur, natus dolorum hic ratione adipisci cumque veritatis molestias nulla voluptatibus, quaerat placeat architecto quae.</p>
                 </section>
                 <Form />
+                <Counter />
             </main>
         )
     }

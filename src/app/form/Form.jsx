@@ -7,14 +7,20 @@ class Form extends Component {
         "Nombre", "Apellido", "Telefono", "Direccion"
     ]
 
+    handleSubmit(e) {
+        e.preventDefault();
+        console.log('0Enviando')
+    }
+
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 {
                     this.listInputs.map((element, index) => (
                         <Input key={index} label={element} />
                     ))
                 }
+                <button type='submit'>Guardar</button>
             </form>
         )
     }
