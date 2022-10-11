@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   entry: "/src/index.js", // main js
   devServer: {
-    port: 5050,
+    port: 3000,
   },
   output: {
     path: path.resolve(__dirname, "build"), // output folder
@@ -34,6 +34,13 @@ module.exports = {
       {
         test: /\.scss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]',
+        }
       },
     ],
   },
