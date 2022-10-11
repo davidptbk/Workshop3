@@ -61,7 +61,6 @@ class Main extends Component {
                         <p className='main__containercards__cards__text'>MAKE IT FISHEYE</p>
                     </div>
                 </section>
-
             </main>
         )
     }
